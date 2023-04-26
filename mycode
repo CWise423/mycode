@@ -1,0 +1,13 @@
+def main():
+
+    wordbank= ["indentation", "spaces"]
+
+    tlgstudents= ["Brandon", "Caleb", "Cat", "Chad the Beardulous", "Chance", "Chris", "Jessica", "Jorge", "Joshua", "Justin", "Lui", "Stephen"]
+
+    wordbank.append(4)
+
+    choice= int(input("Pick a student number between 1 and 11."))
+    
+    student_name= tlgstudents[choice]
+
+    print(f"{Student_name} always uses {[0][-1],} {[0][1]} to indent."

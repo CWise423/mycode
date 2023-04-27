@@ -16,7 +16,7 @@ def main():
     while score < 10:
 
         q1 = input("Where can I buy a Beefy 5-layer Burrito?\n>").lower()
-        answer = q1
+        
         if q1 == "taco bell":
             print("Live Mas")
             score = score + 1
@@ -27,7 +27,7 @@ def main():
         print(f"Score= {score}")
 
         q2 = input("Where can I order Chick-n-Minis for breakfast?\n>").lower()
-        answer = q2
+        
         if q2 == "chick-fil-a":
             print("I knew you eat that Gospel Chicken")
             score = score + 1
@@ -40,8 +40,9 @@ def main():
             print("I pray the Lord blesses you with Chick-fil-a's Gospel Chicken.")
             score = score
         print(f"Score =  {score}")
+        
         q3 = input("If I want a Triple Whopper, where do I go?\n>").lower()
-        answer = q3
+        
         if q3 == "burger king":
             print("Have it your way.")
             score = score + 1
@@ -67,6 +68,7 @@ def main():
         if q5 == "wendys":
             print == ("Correct. And supposedly the patty is fresh, never frozen?!")
             score = score + 1
+        
         else:
             print("Nope. Just for that, I'm eating your Wendy's Frostie!")
             score = score
@@ -91,6 +93,7 @@ def main():
         if q7 == "sonic":
             print("Yes. You get a free Strawberry Limeade.")
             score = score + 1
+        
         else: 
             print("Incorrect. Drive in to Sonic more often.")
             score = score

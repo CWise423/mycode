@@ -26,8 +26,7 @@ def showStatus():
 #an inventory, which is initially empty
 inventory = []
 
-#a dictionary linking a room to other rooms
-## A dictionary linking a room to other rooms
+#a dictionary linking a location to other locations
 locations = {
 
             'Gilmer County' : {
@@ -36,15 +35,16 @@ locations = {
                 },
             'Hiawassee River' : {
                   'north' : 'Nantahala Mountains',
+                  'south' : 'Gilmer County',
                   'item'  : 'raft',
                 },
             'Widow Johnsons Cabin' : {
                   'west' : 'Gilmer County',
                   'item' : 'apple pie',
-                  'item' : 'toilet paper',
                },
             'Nantahala Mountains' : {
                   'south' : 'Hiawassee River',
+                  'north' : 'Smoky Mountains',
                   'item'  : 'blackberries',
                 },
             'Smoky Mountains' : {
@@ -113,6 +113,6 @@ while True:
     print('A mama bear mauled you. You died and you will never hike the Appalachian Trail')
     break
 
-  elif currentLocation == 'Widow Johnsons Cabin' and 'item' in locations[currentLocation] and 'apple pie' in locations[currentLocation]['item']:
+  elif currentLocation == 'Widow Johnsons Cabin' and 'apple pie' in inventory:
     print('You hear the click of a double barrel shotgun and realize the pie was not worth it')
     break

@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 
+# Imports
+import cabin
+
 # Replace RPG starter project with this code when new instructions are live
 
 def showInstructions():
   #print a main menu and the commands
   print('''
-RPG Game
-========
+Appalachian Trail
+=================
 Commands:
   go [direction]
   get [item]
@@ -102,7 +105,12 @@ while True:
     else:
       #tell them they can't get it
       print('Can\'t get ' + move[1] + '!')
-      
+  
+
+  ## if they go into the cabin
+  if currentLocation == 'Widow Johnsons Cabin':
+      cabin.cabin()
+
   ## Define how a player can win
   if currentLocation == 'Moonshine Still' and 'moonshine' in inventory:
     print('You won the respect of the Mountain People... They awarded you with a jar of their "good stuff" and it made you feel so good that you levitated to Maine! Congratulations on finishing the Appalachian Trail')

@@ -1,0 +1,42 @@
+{
+  "Clingmans Dome": {
+    "Elevation": 6643,
+    "Range": "Central Great Smoky Mountains"
+  },
+  "Mount Guyot": {
+    "Elevation": 6621,
+    "Range": "Eastern Great Smoky Mountains"
+  },
+  "Mount Le Conte": {
+    "Elevation": 6593,
+    "Range": "Eastern Great Smoky Mountains"
+  },
+  "Mount Chapman": {
+    "Elevation": 6417,
+    "Range": "Eastern Great Smoky Mountains"
+  },
+  "Old Black": {
+    "Elevation": 6370,
+    "Range": "Eastern Great Smoky Mountains"
+  },
+  "Roan High Knob": {
+    "Elevation": 6370,
+    "Range": "Roan-Unaka Mountains"
+  },
+  "Mount Kephart": {
+    "Elevation": 6217,
+    "Range": "Eastern Great Smoky Mountains"
+  },
+  "Mount Collins": {
+    "Elevation": 6188,
+    "Range": "Central Great Smoky Mountains"
+  },
+  "Mount Sequoyah": {
+    "Elevation": 6003,
+    "Range": "Eastern Great Smoky Mountains"
+  },
+  "Anakeesta Knob": {
+    "Elevation": 5988,
+    "Range": "Eastern Great Smoky Mountains"
+  }
+}

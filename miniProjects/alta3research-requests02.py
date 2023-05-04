@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final MiniProject Using Flask | Braves Fan Page | Caleb Wise"""
+"""Final MiniProject Using Flask | Peak Seekers App | Caleb Wise"""
 
 import json
 import random
@@ -10,17 +10,26 @@ with open("mountains.json", "r") as peaks:
 
 app = Flask(__name__)
 
-@app.route("/success/<name>")
-def succes(name):
-    return f"Welcome {name}\n"
-
 @app.route("/")
 @app.route("/start")
 def start():
     return render_template("peakseeker.html")
 
-def peak_from_list(liststr):
-    """returns a randomly selected peak from the given mountain range"""
+@app.route("/search", methods= ["POST"])
+def search():
+    if request.form.get("range"):
+        answer = request.form.get("range")
+        if answer == "Central Great Smoky Mountains":
+            return redirect("/results")
+        elif answer == "Eastern Great Smoky Mountains":
+            return redirect("/results")
+        elif answer == "Roan-Unaka Mountains":
+            return redirect("/results")
+    else : f"Sorry, there are no peaks from that range in this list."
+
+@app.route("/results")
+def peak_from_list(data):
+    """returns the mountains in the the given mountain range"""
     while True:
         random.shuffle(data)
         for eachpeak in data:
@@ -30,4 +39,4 @@ def peak_from_list(liststr):
         return "Sorry, no peaks from your choice are in the top 10."
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=2224)
+    app.run(host="0.0.0.0", port=2224, debug=True)

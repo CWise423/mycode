@@ -10,17 +10,11 @@ with open("mountains.json", "r") as peaks:
 
 app = Flask(__name__)
 
-# oh I see the problem
-# so there is no function defined under the decorator on line 13
-# so dumb ol' python is assigning two decorators to your success() function below
-# and when you go to "/" by itself, you are not providing a value for <name>
-# and without "name" defined, the function throws a fit
-# so either delete line 13 or add a function below it- that will fix the issue you currently have
-
 @app.route("/success/<name>")
 def succes(name):
     return f"Welcome {name}\n"
 
+@app.route("/")
 @app.route("/start")
 def start():
     return render_template("peakseeker.html")

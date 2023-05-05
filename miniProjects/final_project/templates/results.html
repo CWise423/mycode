@@ -2,7 +2,12 @@
 <html>
   <body>
    
-      <h1> Here are the peaks in the {{ matches }}! </h1>  
+    <h1> Here are the peaks in the {{ jinjamountain }}! </h1>  
+    
+    {% for match in jinjamatches %}
+    <li> {{ match }} </li>
+    {% endfor %}
+     
 
   </body>
 </html>

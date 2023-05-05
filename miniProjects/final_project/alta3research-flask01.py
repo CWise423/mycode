@@ -10,7 +10,12 @@ with open("mountains.json", "r") as peaks:
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/alldata") # NEW
+def alldata():
+    return data
+    # this just returns ALL your mountain data in JSON format
+
+@app.route("/", methods= ["GET"])
 @app.route("/start")
 def start():
     return render_template("peakseeker.html")
@@ -41,8 +46,11 @@ def peak_from_list(mountain):
            # if so, add that key to the list
            matches.append(x)
 
+    print("matches:", matches)
     # return the list of peaks
-    return render_template("results.html", matches = mountain)
+    return render_template("results.html", jinjamatches = matches, jinjamountain= mountain)
+                                       #    ^             ^ variable in the python script
+                                       #    variable in the jinja2 file
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=2224, debug=True)

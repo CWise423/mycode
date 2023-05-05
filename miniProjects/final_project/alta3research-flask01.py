@@ -27,7 +27,7 @@ def search():
             return redirect(url_for("peak_from_list", mountain=answer ))
     else : f"Sorry, there are no peaks from that range in this list."
 
-@app.route("/results/<mountain>")
+@app.route("/results/<mountain>", methods= ["POST","GET"])
 def peak_from_list(mountain):
     """returns the mountains in the given mountain range"""
     # we will need to loop over all the keys in your dictionary,
